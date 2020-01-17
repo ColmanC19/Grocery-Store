@@ -46,7 +46,7 @@ RSpec.configure do |config|
   # `post` in specs under `spec/controllers`.
   #
   # You can disable this behaviour by removing the line below, and instead
-  # explicitly tag your specs with their type, e.g.:
+  # explicitly review your specs with their type, e.g.:
   #
   #     RSpec.describe UsersController, :type => :controller do
   #       # ...
