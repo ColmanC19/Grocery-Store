@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Product.destroy_all
 
-
+  
 50.times do |index|
   Product.create! :reviews => Faker::Commerce.product_name(max: 50)
 end
