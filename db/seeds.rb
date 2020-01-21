@@ -6,10 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Product.destroy_all
+Review.destroy_all
 
-  
+
 50.times do |index|
-  Product.create! :reviews => Faker::Commerce.product_name(max: 50)
+  Product.create! :products => Faker::Commerce.product_name(max: 50)
+
+5.times do |index|
+  Review.create! :reviews => Faker::Commerce.product_name(max: 5)
+end
 end
 
-p "Created #{Product.count} product"
+
+p "Created #{Product.count} products and #{Review.count} reviews"
