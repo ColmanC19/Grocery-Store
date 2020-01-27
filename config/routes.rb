@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :sessions
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
 
