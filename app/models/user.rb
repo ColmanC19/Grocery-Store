@@ -1,3 +1,4 @@
+require 'bcrypt'
 class User < ApplicationRecord
   attr_accessor :password
   validates_confirmation_of :password

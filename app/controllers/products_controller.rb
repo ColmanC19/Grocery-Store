@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
 
-  # before_action :authorize, only: [:new, :create, :edit, :update, :destroy]
+  before_action :authorize, only: [:new, :create, :edit, :update, :destroy]
 
 
   def save

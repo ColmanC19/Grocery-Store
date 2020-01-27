@@ -1,9 +1,9 @@
 class ReviewsController < ApplicationController
-  # before_action :authorize, only: [:new, :create, :edit, :update, :destroy]
+  before_action :authorize, only: [:new, :create, :edit, :update, :destroy]
 
   def index
   end
-  
+
   def save
   end
 

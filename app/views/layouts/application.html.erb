@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>RailsGroceryStore</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="/styles.css">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,8 +12,14 @@
   </head>
 
   <body>
-    <%= flash[:alert] %>
-    <%= flash[:notice] %>
+    <% if current_user %>
+    <%= current_user.email %> | <%= link_to "Sign out", '/signout' %>
+  <% else %>
+    <%= link_to "Sign up", 'signup' %> | <%= link_to "Sign in", '/signin' %>
+  <% end %>
+
+  <%= flash[:alert] %>
+  <%= flash[:notice] %>
     <%= yield %>
   </body>
 </html>
