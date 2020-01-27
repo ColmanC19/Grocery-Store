@@ -1,7 +1,9 @@
 class ReviewsController < ApplicationController
   # before_action :authorize, only: [:new, :create, :edit, :update, :destroy]
 
-
+  def index
+  end
+  
   def save
   end
 
@@ -15,7 +17,8 @@ class ReviewsController < ApplicationController
     @product = Product.find(params[:product_id])
     @review = @product.reviews.new(review_params)
     if @review.save
-      redirect_to product_path(@product)
+            flash[:notice] = "Review successfully added!"
+      redirect_to products_path(@product)
     else
       render :new
     end
@@ -50,7 +53,7 @@ class ReviewsController < ApplicationController
 
   private
     def review_params
-      params.require(:review).permit(:name)
+      params.require(:review).permit(:author, :content_body, :rating, :product_id)
     end
 
 end
