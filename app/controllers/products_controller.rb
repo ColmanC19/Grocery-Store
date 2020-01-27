@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
 
   def save
   end
+
   def index
     @products = Product.all
     render :index
