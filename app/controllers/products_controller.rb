@@ -3,8 +3,8 @@ class ProductsController < ApplicationController
   before_action :authorize, only: [:new, :create, :edit, :update, :destroy]
 
 
-  def save
-  end
+  # def save
+  # end
 
   def index
     @products = Product.all
