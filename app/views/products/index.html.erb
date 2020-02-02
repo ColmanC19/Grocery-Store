@@ -1,4 +1,7 @@
-<h1>products</h1>
+<h1>Available products</h1>
+<h3>Scroll down for more</h3>
+
+<div class="product_title_div">
 
 <% if @products.any? %>
 <ul>
@@ -6,9 +9,10 @@
     <li><%= link_to product.name, product_path(product) %></li>
   <% end %>
 </ul>
+</div>
 <% else %>
 <p>There are no products yet.</p>
 <% end %>
 
 
-<p><%= link_to "Create new product", new_product_path %></p>
+<h4><%= link_to "*Click here to create new product", new_product_path %></h4>

@@ -6,3 +6,12 @@ body{
   color: black;
 
 }
+
+.product_title_div {
+  width: 500px;
+  height: 400px;
+  overflow: scroll;
+  border-style: solid;
+  border-width: 2px;
+  scroll-behavior: smooth;
+}
